@@ -24,22 +24,58 @@ public static void rollDice (Scanner input) {
         System.out.println("What do they call you DUDE?");
         String userName = input.nextLine();
 
-    while( true ){
-//        System.out.println("rollDice test");
+        while( true ){
+    //        System.out.println("rollDice test");
 
-        System.out.println(" Tp roll the dice, pick a number 1 through 6. If you Roll the dice and if you roll a 6 you pass the grumpy neighbor!");
-        short n = Short.parseShort(input.nextLine());
-        int range = n - 1 + 1;
-        System.out.println("roll dice = " + ((int)(Math.random() * range) + 1) );
+            System.out.println(" T0 roll the dice, pick a number 1 through 6. If you roll a 6 you pass the grumpy neighbor! If not, hold on to your hat!");
+            short n = Short.parseShort(input.nextLine());
+            int range = n - 1 + 1;
+            System.out.println("roll dice = " + ((int)(Math.random() * range) + 1) );
 
-//        if ( )
 
-//        System.out.println("Do you wish to continue? y/n");
-//        if(input.nextLine().toLowerCase().equals("n")){
-//            break;
-//        }
-    }
+            String again = "y";
+
+            while (again.equalsIgnoreCase("y")) {
+                System.out.println("Rolling the dice...");
+                int die1 = (int)(Math.random()*6) + 1;
+
+
+
+
+                System.out.println("Your computed roll is " + die1);
+
+    //            6 -car speed, 1 -newspaper
+//                int heroHealth = 3;
+
+                if(die1 == 6) {
+
+                    System.out.println("FAR OUT MAN! Hang on to this car bumper for a FREE PASS!");
+                    break;
+
+                } else if (die1 % 2 == 0) {
+
+                    System.out.println("GNARLY DUDE! He missed!");
+
+                } else if(die1 % 2 != 0){
+
+                    int i = 0;
+                    while (i < 3){
+                        System.out.println("AAAWWWW busted! Lose 1 life!");
+                        i++;
+
+                    }
+                    System.out.println("GAME OVER! ");
+                }
+
+                System.out.print("Roll again? [y/n] ");
+                again = input.nextLine();
+
+            }
+    //        return input;
+        }
+
+        }
 
 
 }
-}
+
