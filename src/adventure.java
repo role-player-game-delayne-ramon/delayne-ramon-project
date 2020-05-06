@@ -71,7 +71,7 @@ public static void rollDice (Scanner input) {
                 again = input.nextLine();
 
             }
-    //        return input;
+
         }
 
         }
