@@ -10,8 +10,8 @@ public class adventure {
 
     public static void rollDice(Scanner input) {
 
-        System.out.println("WUZZZUUUUUUUP sk8ers!!! Today you are going to the sk8 park!\nGrumpy Mr.Neebercracker is hating as usual and throwing newspapers\nat you to try and stop you!" +
-                " So you have to do your best to avoid him.\nIf you roll a 6 you will bypass him all together! If not, hold on to your hats!\n\nAre you ready to ROCK N ROLL?  [y/n]");
+        System.out.println("\n\nWUZZZUUUUUUUP sk8ers!!! Today you are going to the sk8 park!\nGrumpy Mr.Neebercracker is hating as usual and throwing newspapers\nat you to try and stop you!" +
+                " So you have to do your best to avoid him.\nAt the beginning, you are given 3 lives. Each time Neeebercracker hits\nyou with a newspaper, you lose a life. If you roll a 6 you will bypass\nhim all together! If not, hold on to your hats!\n\nAre you ready to ROCK N ROLL?  [y/n]");
         String userResponse = input.nextLine();
 
         if (userResponse.equalsIgnoreCase("y")) {
